@@ -1,0 +1,6 @@
+{
+    "description": {
+        "description": "The extension's description.",
+        "message": "This Google Chrome extension allows you to quote tweets from your web browser, like you can already do in the Twitter mobile apps."
+    }
+}
