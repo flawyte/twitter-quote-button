@@ -1,8 +1,14 @@
 {
     "author": "Mickaël Allonneau",
+    "content_scripts": [
+        {
+            "matches": ["https://twitter.com/"],
+            "js": ["jquery.min.js", "timeline.js"]
+        }
+    ],
     "default_locale": "en",
     "description": "__MSG_description__",
     "manifest_version": 2,
     "name": "Twitter Quote Button",
-    "version": "1.0-dev"
+    "version": "1.0"
 }

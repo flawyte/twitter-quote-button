@@ -2,5 +2,9 @@
     "description": {
         "description": "The extension's description.",
         "message": "This Google Chrome extension allows you to quote tweets from your web browser, like you can already do in the Twitter mobile apps."
+    },
+    "quote": {
+        "description": "The text of the button which is added to every tweet in the page.",
+        "message": "Quote"
     }
 }
