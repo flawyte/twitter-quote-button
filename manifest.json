@@ -1,5 +1,9 @@
 {
     "author": "Mickaël Allonneau",
+    "background": {
+        "persistent": false,
+        "scripts": ["jquery.min.js", "loader.js"]
+    },
     "content_scripts": [
         {
             "matches": ["https://twitter.com/"],
