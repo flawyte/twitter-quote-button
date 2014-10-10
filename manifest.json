@@ -8,7 +8,7 @@
         {
             "matches": ["https://twitter.com/"],
             "css": ["semantic.css", "modal.css"],
-            "js": ["jquery.min.js", "semantic.js", "modal.js", "timeline.js"]
+            "js": ["jquery.min.js", "semantic.js", "modal.js", "timeline.js", "quote-tweet-dialog.js"]
         }
     ],
     "default_locale": "en",
