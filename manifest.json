@@ -7,7 +7,8 @@
     "content_scripts": [
         {
             "matches": ["https://twitter.com/"],
-            "js": ["jquery.min.js", "timeline.js"]
+            "css": ["semantic.css", "modal.css"],
+            "js": ["jquery.min.js", "semantic.js", "modal.js", "timeline.js"]
         }
     ],
     "default_locale": "en",
