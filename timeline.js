@@ -34,15 +34,25 @@ function getMenusArray() {
                 []);
 }
 
+function getTweetAuthor(element) {
+    return $(element).closest('.tweet').find('.username').text();
+}
+
+function getTweetText(element) {
+    return $(element).closest('.tweet').find('.tweet-text').text();
+}
+
 function onClickQuoteButton(event) {
     // Get the btn's parent tweet's author
-    var author = "flawyte";
+    var author = getTweetAuthor(event.currentTarget);
     // Get the btn's parent tweet's text
-    var text = "Test trololololo";
+    var text = getTweetText(event.currentTarget);
     // Set the focus on the text field first (so the tweet form will be expanded)
     $('#tweet-box-mini-home-profile').focus();
     // Set the tweet text as its value
-    $('#tweet-box-mini-home-profile').first().text('RT @' + author + ': ' + text);
+    $('#tweet-box-mini-home-profile').first().text('RT ' + author + ': ' + text);
     // Set the scroll bar at the top of the page
     $(document).scrollTop(0);
+    // Close the dropdown menu
+    $(event.currentTarget).closest('.tweet').find('.dropdown-toggle').click();
 }
