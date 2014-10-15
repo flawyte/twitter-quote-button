@@ -7,10 +7,12 @@ for (var index in menus) {
     var menu = $(menus[index]);
     var quoteButtonText = chrome.i18n.getMessage("quote");
 
-    // Sets up the button
+    // Set up the button
     innerButton.attr('class', 'dropdown-link');
     innerButton.attr('role', 'menuitem');
     innerButton.attr('type', 'button');
+    // Attach it the click listener
+    innerButton.click(onClickQuoteButton);
     // Set the button's text
     innerButton.text(quoteButtonText);
     // Add the "Quote" button
@@ -30,4 +32,17 @@ function getMenusArray() {
                     return true;
                 },
                 []);
+}
+
+function onClickQuoteButton(event) {
+    // Get the btn's parent tweet's author
+    var author = "flawyte";
+    // Get the btn's parent tweet's text
+    var text = "Test trololololo";
+    // Set the focus on the text field first (so the tweet form will be expanded)
+    $('#tweet-box-mini-home-profile').focus();
+    // Set the tweet text as its value
+    $('#tweet-box-mini-home-profile').first().text('RT @' + author + ': ' + text);
+    // Set the scroll bar at the top of the page
+    $(document).scrollTop(0);
 }
