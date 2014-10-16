@@ -2,10 +2,17 @@
 var menus = getMenusArray();
 
 addQuoteButton(menus);
+addMutationListener();
 
 /**
  ** FUNCTIONS
  **/
+
+function addMutationListener() {
+    $('#stream-items-id').arrive('li[data-item-type=tweet]', function() {
+        addQuoteButton($(this).find('li.more-tweet-actions .dropdown-menu > ul').toArray());
+    });
+}
 
 function addQuoteButton(menus) {
     for (var index in menus) {
