@@ -1,20 +1,16 @@
 addDelegateMenusClickListeners();
+addDelegateButtonsClickListeners();
 
 /**
  ** FUNCTIONS
  **/
 
+function addDelegateButtonsClickListeners() {
+    $('#stream-items-id .dropdown-menu > ul').on('click', '.quote-button', onClickQuoteButton);
+}
+
 function addDelegateMenusClickListeners() {
-    $('li.more-tweet-actions').on('click', '.dropdown-toggle', function() {
-        var self = $(this);
-        var menu = self.siblings('.dropdown-menu').find('ul');
-
-        if (menu.hasClass('quote-inserted'))
-            return;
-
-        menu.addClass('quote-inserted');
-        addQuoteButton(menu);
-    });
+    $('#stream-items-id').on('click', '.dropdown > .dropdown-toggle', onClickMenu);
 }
 
 function addQuoteButton(menu) {
@@ -23,7 +19,7 @@ function addQuoteButton(menu) {
     var quoteButtonText = chrome.i18n.getMessage("quote");
 
     // Set up the button
-    innerButton.attr('class', 'dropdown-link');
+    innerButton.attr('class', 'dropdown-link quote-button');
     innerButton.attr('role', 'menuitem');
     innerButton.attr('type', 'button');
     // Attach it the click listener
@@ -44,11 +40,24 @@ function getTweetText(element) {
     return $(element).closest('.tweet').find('.tweet-text').text();
 }
 
-function onClickQuoteButton(event) {
+function onClickMenu() {
+    var self = $(this);
+    var menu = self.siblings('.dropdown-menu').find('ul');
+
+    if (menu.hasClass('quote-inserted'))
+        return;
+
+    menu.addClass('quote-inserted');
+    addQuoteButton(menu);
+}
+
+function onClickQuoteButton() {
+    var self = $(this);
+
     // Get the btn's parent tweet's author
-    var author = getTweetAuthor(event.currentTarget);
+    var author = getTweetAuthor(this);
     // Get the btn's parent tweet's text
-    var text = getTweetText(event.currentTarget);
+    var text = getTweetText(this);
     // Set the focus on the text field first (so the tweet form will be expanded)
     $('#tweet-box-mini-home-profile').focus();
     // Set the tweet text as its value
@@ -56,5 +65,5 @@ function onClickQuoteButton(event) {
     // Set the scroll bar at the top of the page
     $(document).scrollTop(0);
     // Close the dropdown menu
-    $(event.currentTarget).closest('.tweet').find('.dropdown-toggle').click();
+    self.closest('.dropdown.open').find('.dropdown-toggle').click();
 }
