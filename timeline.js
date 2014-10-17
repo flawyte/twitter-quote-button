@@ -1,7 +1,7 @@
 // Get all the "··· More" menus
 var menus = getMenusArray();
 
-addQuoteButton(menus);
+addQuoteButtons(menus);
 addMutationListener();
 
 /**
@@ -10,11 +10,11 @@ addMutationListener();
 
 function addMutationListener() {
     $('#stream-items-id').arrive('li[data-item-type=tweet]', function() {
-        addQuoteButton($(this).find('li.more-tweet-actions .dropdown-menu > ul').toArray());
+        addQuoteButtons($(this).find('li.more-tweet-actions .dropdown-menu > ul').toArray());
     });
 }
 
-function addQuoteButton(menus) {
+function addQuoteButtons(menus) {
     for (var index in menus) {
         var newItem = $(document.createElement('li'));
         var innerButton = $(document.createElement('button'));
