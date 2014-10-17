@@ -1,7 +1,4 @@
-// Get all the "··· More" menus
-var menus = getMenusArray();
-
-addQuoteButtons(menus);
+addQuoteButtons(getMenusArray());
 addMutationListener();
 
 /**
@@ -10,29 +7,32 @@ addMutationListener();
 
 function addMutationListener() {
     $('#stream-items-id').arrive('li[data-item-type=tweet]', function() {
-        addQuoteButtons($(this).find('li.more-tweet-actions .dropdown-menu > ul').toArray());
+        addQuoteButton($(this).find('li.more-tweet-actions .dropdown-menu > ul'));
     });
+}
+
+function addQuoteButton(menu) {
+    var newItem = $(document.createElement('li'));
+    var innerButton = $(document.createElement('button'));
+    var quoteButtonText = chrome.i18n.getMessage("quote");
+
+    // Set up the button
+    innerButton.attr('class', 'dropdown-link');
+    innerButton.attr('role', 'menuitem');
+    innerButton.attr('type', 'button');
+    // Attach it the click listener
+    innerButton.click(onClickQuoteButton);
+    // Set the button's text
+    innerButton.text(quoteButtonText);
+    // Add the "Quote" button
+    newItem.prepend(innerButton);
+    // Add the item to the list
+    menu.prepend(newItem);
 }
 
 function addQuoteButtons(menus) {
     for (var index in menus) {
-        var newItem = $(document.createElement('li'));
-        var innerButton = $(document.createElement('button'));
-        var menu = $(menus[index]);
-        var quoteButtonText = chrome.i18n.getMessage("quote");
-
-        // Set up the button
-        innerButton.attr('class', 'dropdown-link');
-        innerButton.attr('role', 'menuitem');
-        innerButton.attr('type', 'button');
-        // Attach it the click listener
-        innerButton.click(onClickQuoteButton);
-        // Set the button's text
-        innerButton.text(quoteButtonText);
-        // Add the "Quote" button
-        newItem.prepend(innerButton);
-        // Add the item to the list
-        menu.prepend(newItem);
+        addQuoteButton($(menus[index]));
     }
 }
 
