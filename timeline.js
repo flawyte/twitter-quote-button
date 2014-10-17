@@ -1,13 +1,19 @@
-addQuoteButtons(getMenusArray());
-addMutationListener();
+addDelegateMenusClickListeners();
 
 /**
  ** FUNCTIONS
  **/
 
-function addMutationListener() {
-    $('#stream-items-id').arrive('li[data-item-type=tweet]', function() {
-        addQuoteButton($(this).find('li.more-tweet-actions .dropdown-menu > ul'));
+function addDelegateMenusClickListeners() {
+    $('li.more-tweet-actions').on('click', '.dropdown-toggle', function() {
+        var self = $(this);
+        var menu = self.siblings('.dropdown-menu').find('ul');
+
+        if (menu.hasClass('quote-inserted'))
+            return;
+
+        menu.addClass('quote-inserted');
+        addQuoteButton(menu);
     });
 }
 
@@ -28,21 +34,6 @@ function addQuoteButton(menu) {
     newItem.prepend(innerButton);
     // Add the item to the list
     menu.prepend(newItem);
-}
-
-function addQuoteButtons(menus) {
-    for (var index in menus) {
-        addQuoteButton($(menus[index]));
-    }
-}
-
-function getMenusArray() {
-    return [].filter.call(
-                document.querySelectorAll("li.more-tweet-actions .dropdown-menu > ul"),
-                function(value, index, array) {
-                    return true;
-                },
-                []);
 }
 
 function getTweetAuthor(element) {
