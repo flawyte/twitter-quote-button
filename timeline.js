@@ -10,7 +10,13 @@ function addDelegateButtonsClickListeners() {
 }
 
 function addDelegateMenusClickListeners() {
-    $('#stream-items-id').on('click', '.dropdown > .dropdown-toggle', onClickMenu);
+    document.querySelector('#stream-items-id').addEventListener('click', function(event) {
+        if ($(event.target).is('.Icon--dots')) {
+            var menu = $(event.target).closest('.dropdown-toggle').siblings('.dropdown-menu');
+
+            onClickMenu(menu);
+        }
+    }, true);
 }
 
 function addQuoteButton(menu) {
@@ -40,9 +46,8 @@ function getTweetText(element) {
     return $(element).closest('.tweet').find('.tweet-text').text();
 }
 
-function onClickMenu() {
-    var self = $(this);
-    var menu = self.siblings('.dropdown-menu').find('ul');
+function onClickMenu(menu) {
+    menu = menu.find('ul');
 
     if (menu.hasClass('quote-inserted'))
         return;
