@@ -1,0 +1,10 @@
+{
+    "description": {
+        "description": "Opis Rozszerzenie jest.",
+        "message": "To rozszerzenie pozwala cytować tweets bezpośrednio z poziomu przeglądarki internetowej, jak można już zrobić w aplikacji mobilnych Twitterze."
+    },
+    "quote": {
+        "description": "Tekst przycisku, który jest dodawany do każdego tweetem na stronie.",
+        "message": "Cytować"
+    }
+}

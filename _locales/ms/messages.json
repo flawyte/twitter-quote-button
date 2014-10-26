@@ -1,0 +1,10 @@
+{
+    "description": {
+        "description": "Keterangan lanjutan itu.",
+        "message": "Pelanjutan ini membenarkan anda untuk mengutip tweet terus dari pelayar web anda, seperti yang Anda boleh lakukan di Twitter aplikasi mudah alih."
+    },
+    "quote": {
+        "description": "Teks butang yang ditambah pada setiap tweet di halaman.",
+        "message": "Kutipan"
+    }
+}

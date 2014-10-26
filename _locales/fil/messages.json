@@ -1,0 +1,10 @@
+{
+    "description": {
+        "description": "Paglalarawan ng extension.",
+        "message": "Pinahihintulutan ka ng extension na ito na quote tweet direkta mula sa iyong web browser, tulad ng maaari mong gawin na sa Twitter mobile apps."
+    },
+    "quote": {
+        "description": "Ang teksto ng pindutan na kung saan ay idinagdag sa araw-tweet na ito sa pahina.",
+        "message": "Panipi"
+    }
+}

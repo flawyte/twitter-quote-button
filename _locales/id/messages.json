@@ -1,0 +1,10 @@
+{
+    "description": {
+        "description": "Deskripsi ekstensi ini.",
+        "message": "Ekstensi ini memungkinkan Anda untuk mengutip tweet langsung dari browser web Anda, seperti yang Anda dapat lakukan dalam aplikasi mobile Twitter."
+    },
+    "quote": {
+        "description": "Teks tombol yang ditambahkan ke setiap tweet yang di halaman.",
+        "message": "Kutipan"
+    }
+}

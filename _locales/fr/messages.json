@@ -1,0 +1,10 @@
+{
+    "description": {
+        "description": "La description de l'extension.",
+        "message": "Cette extension vous permet de citer des tweets directement depuis de votre navigateur Web, comme vous pouvez déjà le faire dans les applications mobiles de Twitter."
+    },
+    "quote": {
+        "description": "Le texte du bouton qui est ajouté à chaque tweet dans la page.",
+        "message": "Citer"
+    }
+}
