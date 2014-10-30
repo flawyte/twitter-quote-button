@@ -57,18 +57,17 @@ function onClickMenu(menu) {
 }
 
 function onClickQuoteButton() {
-    var self = $(this);
-
     // Get the btn's parent tweet's author
     var author = getTweetAuthor(this);
     // Get the btn's parent tweet's text
     var text = getTweetText(this);
-    // Set the focus on the text field first (so the tweet form will be expanded)
-    $('#tweet-box-mini-home-profile').focus();
-    // Set the tweet text as its value
-    $('#tweet-box-mini-home-profile').first().text('RT ' + author + ': ' + text);
-    // Set the scroll bar at the top of the page
-    $(document).scrollTop(0);
+
+    // Simulate a click on the top right button to open the tweet dialog
+    $('#global-new-tweet-button').click();
     // Close the dropdown menu
-    self.closest('.dropdown.open').find('.dropdown-toggle').click();
+    $(this).closest('.dropdown.open').find('.dropdown-toggle').click();
+    // Set the focus on the text area first
+    $('#tweet-box-global').focus();
+    // Set the tweet text as its value
+    $('#tweet-box-global').text('RT ' + author + ': ' + text);
 }
