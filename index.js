@@ -6,11 +6,11 @@ addDelegateButtonsClickListeners();
  **/
 
 function addDelegateButtonsClickListeners() {
-    $('#stream-items-id .dropdown-menu > ul').on('click', '.quote-button', onClickQuoteButton);
+    $('#page-container').on('click', '.dropdown-menu > ul .quote-button', onClickQuoteButton);
 }
 
 function addDelegateMenusClickListeners() {
-    document.querySelector('#stream-items-id').addEventListener('click', function(event) {
+    document.querySelector('#page-container').addEventListener('click', function(event) {
         if ($(event.target).is('.Icon--dots')) {
             var menu = $(event.target).closest('.dropdown-toggle').siblings('.dropdown-menu');
 
