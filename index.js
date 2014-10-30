@@ -11,7 +11,8 @@ function addDelegateButtonsClickListeners() {
 
 function addDelegateMenusClickListeners() {
     document.querySelector('#page-container').addEventListener('click', function(event) {
-        if ($(event.target).is('.home-stream .Icon--dots')) {
+        // Using the 'not()' selector to prevent the button to appear on profile pages
+        if ($(event.target).not('.Grid .Icon--dots').is('.Icon--dots')) {
             var menu = $(event.target).closest('.dropdown-toggle').siblings('.dropdown-menu');
 
             onClickMenu(menu);
