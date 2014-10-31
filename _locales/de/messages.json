@@ -1,7 +1,7 @@
 {
     "description": {
         "description": "Die Erweiterung der Beschreibung.",
-        "message": "Diese Erweiterung ermöglicht es Ihnen, Tweets direkt von Ihrem Web-Browser zu zitieren, wie man schon in den Twitter mobile Apps zu tun."
+        "message": "Diese Erweiterung ermöglicht es Ihnen, Tweets (\"quote retweet\") von der Twitter-Website zitieren."
     },
     "quote": {
         "description": "Der Text der Taste, die zu jedem Tweet in die Seite eingefügt wird.",

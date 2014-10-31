@@ -1,7 +1,7 @@
 {
     "description": {
         "description": "Popis rozšíření je.",
-        "message": "Toto rozšíření vám umožňuje citovat tweety přímo z webového prohlížeče, jako byste již můžete udělat v mobilních aplikacích Twitter."
+        "message": "Toto rozšíření vám umožňuje citovat tweety (\"quote retweet\") z webových stránek Twitter."
     },
     "quote": {
         "description": "Text tlačítka, která se přidává do každého tweetu na stránce.",

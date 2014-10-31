@@ -1,7 +1,7 @@
 {
     "description": {
         "description": "擴展的描述。",
-        "message": "這個擴展可以讓你直接從Web瀏覽器引述鳴叫，好像你已經可以在Twitter的移動應用程序做的。"
+        "message": "這個擴展可以讓你的微博網站推特舉(\"quote retweet\")。"
     },
     "quote": {
         "description": "這是添加到頁面中的每一個推按鈕的文本。",

@@ -1,7 +1,7 @@
 {
     "description": {
         "description": "Mô tả của phần mở rộng.",
-        "message": "Phần mở rộng này cho phép bạn trích dẫn tweet trực tiếp từ trình duyệt web của bạn, như bạn đã có thể làm trong các ứng dụng di động Twitter."
+        "message": "Phần mở rộng này cho phép bạn trích dẫn tweets (\"quote retweet\") từ trang web Twitter."
     },
     "quote": {
         "description": "Các văn bản của các nút được thêm vào mỗi tweet trong trang.",

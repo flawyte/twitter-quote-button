@@ -1,7 +1,7 @@
 {
     "description": {
         "description": "Eklentinin açıklaması.",
-        "message": "Bu uzantı zaten Twitter mobil uygulamalar yapabileceği gibi, web tarayıcı doğrudan tweets alıntı yapmanızı sağlar."
+        "message": "Bu uzantı Twitter web sitesinden (\"quote retweet\") tweets alıntı sağlar."
     },
     "quote": {
         "description": "Bulma her Tweet'inize eklenir düğmesinin metni.",

@@ -1,7 +1,7 @@
 {
     "description": {
         "description": "拡張機能の説明です。",
-        "message": "この拡張は、すでにTwitterの携帯アプリでできるようにあなたは、Webブラウザから直接つぶやきを引用することができます。"
+        "message": "この拡張では、TwitterのWebサイトから(\"quote retweet\")をつぶやきを引用することができます。"
     },
     "quote": {
         "description": "ページ内のすべてのつぶやきに追加されたボタンのテキスト。",

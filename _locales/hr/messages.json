@@ -1,7 +1,7 @@
 {
     "description": {
         "description": "Ekstenzija opis.",
-        "message": "Ovo proširenje vam omogućuje da citiram tweetove izravno iz svog web preglednika, kao što već možete učiniti u Twitter mobilnim aplikacijama."
+        "message": "Ovo proširenje vam omogućuje da citiraju tweetove (\"quote retweet\") iz Twitter stranicama."
     },
     "quote": {
         "description": "Tekst gumb koji je dodao da svaki cvrkut na stranici.",
