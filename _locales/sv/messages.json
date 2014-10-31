@@ -1,0 +1,10 @@
+{
+    "description": {
+        "description": "Förlängningen beskrivning.",
+        "message": "Denna förlängning kan du citera tweets direkt från din webbläsare, som du kan göra redan på Twitter mobilappar."
+    },
+    "quote": {
+        "description": "Texten på knappen som sätts till varje tweet i sidan.",
+        "message": "Citat"
+    }
+}

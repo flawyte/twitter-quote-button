@@ -1,0 +1,10 @@
+{
+    "description": {
+        "description": "Eklentinin açıklaması.",
+        "message": "Bu uzantı zaten Twitter mobil uygulamalar yapabileceği gibi, web tarayıcı doğrudan tweets alıntı yapmanızı sağlar."
+    },
+    "quote": {
+        "description": "Bulma her Tweet'inize eklenir düğmesinin metni.",
+        "message": "Alıntı"
+    }
+}
