@@ -1,0 +1,10 @@
+{
+    "description": {
+        "description": "Udvidelsen beskrivelse.",
+        "message": "Denne udvidelse giver dig mulighed for at citere tweets direkte fra din webbrowser, ligesom du allerede kan gøre i kvidre mobile apps."
+    },
+    "quote": {
+        "description": "Teksten til knappen, der er føjet til hver tweet på siden.",
+        "message": "Citat"
+    }
+}

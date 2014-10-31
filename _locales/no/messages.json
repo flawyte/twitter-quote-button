@@ -1,0 +1,10 @@
+{
+    "description": {
+        "description": "Utvidelsen beskrivelse.",
+        "message": "Denne utvidelsen lar deg sitere tweets direkte fra nettleseren, som du allerede kan gjøre i Twitter mobile apps."
+    },
+    "quote": {
+        "description": "Teksten på knappen som er lagt til hver tweet på siden.",
+        "message": "Sitere"
+    }
+}

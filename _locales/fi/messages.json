@@ -1,0 +1,10 @@
+{
+    "description": {
+        "description": "Laajennus kuvaus.",
+        "message": "Tämä laajennus antaa sinulle mahdollisuuden lainata tweets suoraan selaimella, kuten voit jo tehdä Twitter mobiilisovellukset."
+    },
+    "quote": {
+        "description": "Teksti -painiketta, joka lisätään jokaisen piipittää sivulla.",
+        "message": "Lainaus"
+    }
+}
