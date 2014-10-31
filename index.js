@@ -12,7 +12,7 @@ function addDelegateButtonsClickListeners() {
 function addDelegateMenusClickListeners() {
     document.querySelector('#page-container').addEventListener('click', function(event) {
         // Using the 'not()' selector to prevent the button to appear on profile pages
-        if ($(event.target).not('.Grid .Icon--dots').is('.Icon--dots')) {
+        if ($(event.target).is('.Icon--dots')) {
             var menu = $(event.target).closest('.dropdown-toggle').siblings('.dropdown-menu');
 
             onClickMenu(menu);
@@ -40,11 +40,13 @@ function addQuoteButton(menu) {
 }
 
 function getTweetAuthor(element) {
-    return $(element).closest('.tweet').find('.username').text();
+    return $(element).closest('.tweet').find('.username').text()
+        || $(element).closest('.ProfileTweet').find('.ProfileTweet-screenname').text();
 }
 
 function getTweetText(element) {
-    return $(element).closest('.tweet').find('.tweet-text').text();
+    return $(element).closest('.tweet').find('.tweet-text').text()
+        || $(element).closest('.ProfileTweet').find('.ProfileTweet-text').text();
 }
 
 function onClickMenu(menu) {
@@ -70,5 +72,5 @@ function onClickQuoteButton() {
     // Set the focus on the text area first
     $('#tweet-box-global').focus();
     // Set the tweet text as its value
-    $('#tweet-box-global').text('RT ' + author + ': ' + text);
+    $('#tweet-box-global').text('RT ' + author.trim() + ': ' + text.trim());
 }
