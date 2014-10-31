@@ -1,7 +1,7 @@
 {
     "description": {
         "description": "Descripción de la extensión.",
-        "message": "Esta extensión le permite citar los tweets directamente desde su navegador web, al igual que ya se puede hacer en las aplicaciones móviles de Twitter."
+        "message": "Esta extensión le permite citar los tweets (\"quote retweet\") desde el sitio web de Twitter."
     },
     "quote": {
         "description": "El texto del botón que se añade a cada tweet en la página.",

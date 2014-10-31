@@ -1,7 +1,7 @@
 {
     "description": {
         "description": "Descrierea extensiei.",
-        "message": "Această extensie vă permite să citez tweets direct din browser-ul web, ca poti face deja în aplicațiile mobile Twitter."
+        "message": "Această extensie vă permite să cita tweets (\"quote retweet\") de pe site-ul Twitter."
     },
     "quote": {
         "description": "Textul din butonul care se adaugă la fiecare tweet în pagina.",

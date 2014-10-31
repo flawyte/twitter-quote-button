@@ -1,7 +1,7 @@
 {
     "description": {
         "description": "A kiterjesztés leírása.",
-        "message": "Ez a kiterjesztés lehetővé teszi, hogy idézni tweets közvetlenül a böngészőben, mint akkor már csinálni a Twitter mobil alkalmazások."
+        "message": "Ez a kiterjesztés lehetővé teszi, hogy idézni tweets (\"quote retweet\") a Twitter honlapján."
     },
     "quote": {
         "description": "A szöveg a gombot, amely hozzáadódik minden csipog az oldalon.",

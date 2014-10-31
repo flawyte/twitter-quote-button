@@ -1,7 +1,7 @@
 {
     "description": {
         "description": "Beschrijving van de extensie.",
-        "message": "Deze extensie kunt u tweets rechtstreeks citeren uit uw web browser, zoals je al kunt doen in de Twitter mobiele apps."
+        "message": "Deze uitbreiding stelt u in staat om tweets te citeren (\"quote retweet\") van de Twitter-website."
     },
     "quote": {
         "description": "De tekst van de knop die wordt toegevoegd aan elke tweet in de pagina.",

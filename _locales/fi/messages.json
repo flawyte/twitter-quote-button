@@ -1,7 +1,7 @@
 {
     "description": {
         "description": "Laajennus kuvaus.",
-        "message": "Tämä laajennus antaa sinulle mahdollisuuden lainata tweets suoraan selaimella, kuten voit jo tehdä Twitter mobiilisovellukset."
+        "message": "Tämä laajennus voit mainita tweets (\"quote retweet\") alkaen Twitter verkkosivuilla."
     },
     "quote": {
         "description": "Teksti -painiketta, joka lisätään jokaisen piipittää sivulla.",
