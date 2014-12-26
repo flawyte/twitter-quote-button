@@ -2,7 +2,7 @@
     "author": "Mickaël Allonneau",
     "content_scripts": [
         {
-            "matches": ["https://twitter.com/*"],
+            "matches": ["*://twitter.com/*"],
             "js": [
                 "libs/jquery.min.js",
                 "index.js"
