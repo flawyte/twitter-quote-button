@@ -45,8 +45,8 @@ function getTweetAuthor(element) {
 }
 
 function getTweetText(element) {
-    return $(element).closest('.tweet').find('.tweet-text').text()
-        || $(element).closest('.ProfileTweet').find('.ProfileTweet-text').text();
+    return $(element).closest('.tweet').find('.tweet-text').html()
+        || $(element).closest('.ProfileTweet').find('.ProfileTweet-text').html();
 }
 
 function onClickMenu(menu) {
@@ -72,5 +72,5 @@ function onClickQuoteButton() {
     // Set the focus on the text area first
     $('#tweet-box-global').focus();
     // Set the tweet text as its value
-    $('#tweet-box-global').text('RT ' + author.trim() + ': ' + text.trim());
+    $('#tweet-box-global').html('RT ' + author.trim() + ': ' + text.trim().replace(/\n/g, '<br />'));
 }
