@@ -10,10 +10,9 @@ function addDelegateButtonsClickListeners() {
 }
 
 function addDelegateMenusClickListeners() {
-    document.querySelector('#page-container').addEventListener('click', function(event) {
-        // Using the 'not()' selector to prevent the button to appear on profile pages
-        if ($(event.target).is('.Icon--dots')) {
-            var menu = $(event.target).closest('.dropdown-toggle').siblings('.dropdown-menu');
+    document.querySelector('#page-container').addEventListener('click', function(e) {
+        if (e.target.matches('.Icon.Icon--caretDownLight.Icon--smallest')) {
+            var menu = $(e.target).closest('.dropdown-toggle').siblings('.dropdown-menu');
 
             onClickMenu(menu);
         }
@@ -60,10 +59,15 @@ function onClickMenu(menu) {
 }
 
 function onClickQuoteButton() {
-    // Get the btn's parent tweet's author
-    var author = getTweetAuthor(this);
-    // Get the btn's parent tweet's text
+    var author = getTweetAuthor(this).trim();
     var text = getTweetText(this);
+
+    text = text.replace(/\n/g, '<br>');
+    text = text.replace(/…/g, '');
+    // Put a space before every opening tag so when it's set as the tweet box's content there are spaces between each children's textContent
+    text = text.replace(/(\w)+<(\w+)/gi, '$1 <$2');
+
+    text = text.trim();
 
     // Simulate a click on the top right button to open the tweet dialog
     $('#global-new-tweet-button').click();
@@ -72,5 +76,5 @@ function onClickQuoteButton() {
     // Set the focus on the text area first
     $('#tweet-box-global').focus();
     // Set the tweet text as its value
-    $('#tweet-box-global').html('RT ' + author.trim() + ': ' + text.trim().replace(/\n/g, '<br />'));
+    $('#tweet-box-global').html('RT ' + author + ': ' + text);
 }
